@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            background-color: #E5E4E2;
+            color: #454545;
+            height: 50px;
+            width: 300px;
+            margin: 0px;
+            padding: 10px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .search-box {
+            background: #eee;
+            width: 200px;
+        }
+
+        .btn-success {
+            background-color: #4AA02C;
+            color: white;
+        }
+    </style>
+
+    <script src="geolocate.js"></script>
+
+</head>
+
+<body>
+    <div class="search-form">
+        <input id="box" class="search-box" name="q" size="40" type="text" placeholder="Place name" />
+        <button id="btn" class="btn-success" title="search in Google Maps">Search</button>
+    </div>
+</body>
+
+</html>

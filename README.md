@@ -1,2 +1,2 @@
 # placesearch
-Extension for Opera for locating a place by name or coordinates in Google Maps
+Extension for Opera for locating a place in Google Maps by entering name or coordinates
