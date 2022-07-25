@@ -5,7 +5,7 @@
     <style>
         html,
         body {
-            background-color: #E5E4E2;
+            background-color: #e5e4e2;
             color: #454545;
             height: 50px;
             width: 300px;
@@ -14,26 +14,36 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
+        
         .search-box {
             background: #eee;
             width: 200px;
         }
-
+        
         .btn-success {
-            background-color: #4AA02C;
+            background-color: #4aa02c;
             color: white;
         }
     </style>
 
-    <script src="geolocate.js"></script>
-
+    <script>
+        function geolocate() {
+            const query = document.getElementById('box').value;
+            if (query) {
+                chrome.tabs.create({
+                    url: `https://www.google.com/maps/search/${query}`,
+                });
+            }
+        }
+    </script>
 </head>
 
 <body>
     <div class="search-form">
         <input id="box" class="search-box" name="q" size="40" type="text" placeholder="Place name" />
-        <button id="btn" class="btn-success" title="search in Google Maps">Search</button>
+        <button id="btn" class="btn-success" title="search in Google Maps" onclick="geolocate">
+            Search
+        </button>
     </div>
 </body>
 

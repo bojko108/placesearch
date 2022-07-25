@@ -1,25 +1,23 @@
 {
-    "manifest_version": 2,
     "name": "Google Maps Search",
+    "version": "3.0",
     "description": "Search places directly in Google Maps",
-    "version": "2.1",
-    "permissions": [
-        "tabs",
-        "contextMenus"
-    ],
+    "manifest_version": 3,
+    "permissions": ["activeTab", "contextMenus"],
+    "host_permissions": ["http://*/", "https://*/"],
     "background": {
-        "scripts": [
-            "geolocate.js"
-        ]
-    },
-    "icons": {
-        "16": "icon.png"
+        "service_worker": "geolocate.js"
     },
     "omnibox": {
         "keyword": "gm"
     },
-    "browser_action": {
+    "action": {
         "default_icon": "icon.png",
-        "default_title": "Geolocate"
+        "default_title": "Geolocate",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "icon_16px.png",
+        "32": "icon_32px.png"
     }
 }
